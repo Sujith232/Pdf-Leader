@@ -1,11 +1,4 @@
 services:
   - type: web
     name: pdf-leader
-    runtime: python
-    pythonVersion: "3.11"
-    buildCommand: >
-      mkdir -p /var/lib/apt/lists/partial &&
-      apt-get update &&
-      apt-get install -y --no-install-recommends libreoffice-core libreoffice-writer libreoffice-calc libreoffice-impress &&
-      pip install -r requirements.txt
-    startCommand: python server.py
+    runtime: docker
