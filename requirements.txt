@@ -1,0 +1,9 @@
+flask==3.1.1
+flask-cors==5.0.1
+pdf2docx==0.5.8
+pdfplumber==0.11.4
+PyMuPDF==1.25.5
+python-pptx==1.0.2
+openpyxl==3.1.5
+Pillow==11.1.0
+pikepdf==9.5.2

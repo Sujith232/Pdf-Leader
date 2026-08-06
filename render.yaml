@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: pdf-leader
+    runtime: python
+    buildCommand: >
+      apt-get update &&
+      apt-get install -y --no-install-recommends libreoffice-core libreoffice-writer libreoffice-calc libreoffice-impress &&
+      pip install -r requirements.txt
+    startCommand: python server.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11"

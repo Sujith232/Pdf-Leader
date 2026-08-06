@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Leader - PDF Tool</title>
+    <meta name="description" content="Use PDF Leader's free online tool to process your PDF files quickly and securely.">
+    <meta name="google-adsense-account" content="ca-pub-7009364142279880">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tools.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7009364142279880" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+</head>
+<body class="tool-page">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg width="38" height="38" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="2" y="2" width="36" height="36" rx="8" fill="#e74c3c"/>
+                        <path d="M12 10h10l6 6v14a2 2 0 01-2 2H12a2 2 0 01-2-2V12a2 2 0 012-2z" fill="#fff"/>
+                        <path d="M22 10v6h6" fill="#f8f9fa"/>
+                        <path d="M14 22h12M14 26h8" stroke="#e74c3c" stroke-width="2" stroke-linecap="round"/>
+                        <circle cx="30" cy="30" r="8" fill="#1e293b"/>
+                        <path d="M27 30l2 2 4-4" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <span class="logo-text">PDF<span class="logo-highlight">Leader</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="tool.html?t=merge" class="nav-link">MERGE PDF</a>
+                <a href="tool.html?t=split" class="nav-link">SPLIT PDF</a>
+                <a href="tool.html?t=compress" class="nav-link">COMPRESS PDF</a>
+                <div class="dropdown">
+                    <a href="#" class="nav-link dropdown-toggle">CONVERT PDF <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu convert-dropdown">
+                        <div class="dropdown-col">
+                            <h4>CONVERT TO PDF</h4>
+                            <ul>
+                                <li><a href="tool.html?t=jpg-to-pdf"><span class="tool-icon-sm" style="background:#ec4899;"><i class="fas fa-image"></i></span> JPG to PDF</a></li>
+                                <li><a href="tool.html?t=word-to-pdf"><span class="tool-icon-sm" style="background:#2563eb;"><i class="fas fa-file-word"></i></span> WORD to PDF</a></li>
+                                <li><a href="tool.html?t=ppt-to-pdf"><span class="tool-icon-sm" style="background:#ea580c;"><i class="fas fa-file-powerpoint"></i></span> POWERPOINT to PDF</a></li>
+                                <li><a href="tool.html?t=excel-to-pdf"><span class="tool-icon-sm" style="background:#16a34a;"><i class="fas fa-file-excel"></i></span> EXCEL to PDF</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown-col">
+                            <h4>CONVERT FROM PDF</h4>
+                            <ul>
+                                <li><a href="tool.html?t=pdf-to-jpg"><span class="tool-icon-sm" style="background:#d946ef;"><i class="fas fa-file-image"></i></span> PDF to JPG</a></li>
+                                <li><a href="tool.html?t=pdf-to-word"><span class="tool-icon-sm" style="background:#2563eb;"><i class="fas fa-file-word"></i></span> PDF to WORD</a></li>
+                                <li><a href="tool.html?t=pdf-to-ppt"><span class="tool-icon-sm" style="background:#ea580c;"><i class="fas fa-file-powerpoint"></i></span> PDF to POWERPOINT</a></li>
+                                <li><a href="tool.html?t=pdf-to-excel"><span class="tool-icon-sm" style="background:#16a34a;"><i class="fas fa-file-excel"></i></span> PDF to EXCEL</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <div class="tool-header" id="toolHeader">
+        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back</a>
+        <h1 id="toolTitle">Tool</h1>
+        <p id="toolDescription">Tool description goes here</p>
+    </div>
+
+    <div class="ad-container" style="max-width:1200px; margin:0 auto; padding:0 2rem;">
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-7009364142279880"
+             data-ad-slot="2640151912"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <div class="tool-workspace" id="toolWorkspace">
+        <!-- Dynamic content loaded here -->
+    </div>
+
+    <footer>
+        <div class="footer-bottom" style="border-top: none; padding-top: 0;">
+            <p>&copy; 2026 PDF Leader - Your PDF Editor</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js?v=2"></script>
+    <script src="js/pdf-worker.js?v=2"></script>
+    <script src="js/tool-page.js?v=2"></script>
+    <script src="js/tools/merge.js?v=2"></script>
+    <script src="js/tools/split.js?v=2"></script>
+    <script src="js/tools/compress.js?v=2"></script>
+    <script src="js/tools/rotate.js?v=2"></script>
+    <script src="js/tools/page-numbers.js?v=2"></script>
+    <script src="js/tools/watermark.js?v=2"></script>
+    <script src="js/tools/unlock.js?v=2"></script>
+    <script src="js/tools/protect.js?v=3"></script>
+    <script src="js/tools/sign.js?v=2"></script>
+    <script src="js/tools/crop.js?v=2"></script>
+    <script src="js/tools/organize.js?v=2"></script>
+    <script src="js/tools/remove-pages.js?v=2"></script>
+    <script src="js/tools/redact.js?v=2"></script>
+    <script src="js/tools/compare.js?v=2"></script>
+    <script src="js/tools/jpg-to-pdf.js?v=2"></script>
+    <script src="js/tools/pdf-to-jpg.js?v=2"></script>
+    <script src="js/tools/word-to-pdf.js?v=2"></script>
+    <script src="js/tools/pdf-to-word.js?v=3"></script>
+    <script src="js/tools/ppt-to-pdf.js?v=3"></script>
+    <script src="js/tools/pdf-to-ppt.js?v=4"></script>
+    <script src="js/tools/excel-to-pdf.js?v=3"></script>
+    <script src="js/tools/pdf-to-excel.js?v=3"></script>
+    <script src="js/tools/repair.js?v=2"></script>
+    <script src="js/tools/ocr.js?v=2"></script>
+    <script src="js/tools/edit.js?v=2"></script>
+</body>
+</html>
