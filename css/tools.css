@@ -652,6 +652,43 @@
     cursor: pointer;
 }
 
+.tool-info {
+    max-width: 900px;
+    margin: 0 auto 2rem;
+    padding: 0 2rem;
+}
+.tool-info-content {
+    background: var(--card-bg);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+.tool-info-content h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+}
+.tool-info-content p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+.tool-info-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.6rem;
+}
+.tool-info-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+.tool-info-feature i {
+    color: #10b981;
+}
+
 @media (max-width: 768px) {
     .tool-workspace {
         padding: 1rem;
